@@ -3,7 +3,6 @@ import Headroom from "react-headroom";
 import { Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 import scrollTo from "gatsby-plugin-smoothscroll";
-import { Squash as Hamburger } from "hamburger-react";
 
 import Logo from "../images/rubi.inline.svg";
 import Facebook from "../images/facebook.inline.svg";
@@ -27,11 +26,15 @@ const StyledLogo = styled(Logo)`
   margin: auto;
 `;
 
-const HamburgerWrapper = styled.div`
-  z-index: 2000;
-  position: absolute;
-  top: 15px;
-  right: 15px;
+const MenuBtn = styled.button`
+  width: 100%;
+  max-width: 50px;
+  background: transparent;
+  border: 0;
+  svg {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 const MobileMenu = styled.div`
@@ -45,6 +48,25 @@ const MobileMenu = styled.div`
   z-index: 1999;
   transform: translateX(-100%);
   transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  button:first-of-type {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    background: transparent;
+    border: 0;
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+  button:not(:first-of-type) {
+    margin-bottom: 1.5rem;
+  }
   &.opened {
     transform: translateX(0);
   }
@@ -77,7 +99,9 @@ const Header = () => {
                 <StyledLogo />
               </Col>
               <Col xs={6} className="d-flex d-lg-none justify-content-end">
-                <Menu />
+                <MenuBtn onClick={() => setOpen(true)}>
+                  <Menu />
+                </MenuBtn>
               </Col>
               <Col lg={5} className="d-none d-lg-block">
                 <Row className="text-center">
@@ -108,9 +132,33 @@ const Header = () => {
         </header>
       </Headroom>
       <MobileMenu className={`d-lg-none${open ? " opened" : ""}`}>
-        <HamburgerWrapper>
-          <Hamburger color="#000" toggled={open} onToggle={setOpen} />
-        </HamburgerWrapper>
+        <button onClick={() => setOpen(false)}>
+          <Close />
+        </button>
+        <MenuItem
+          onClick={() => {
+            scrollTo("#horarios");
+            setOpen(false);
+          }}
+        >
+          Horarios y ubicación
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            scrollTo("#products");
+            setOpen(false);
+          }}
+        >
+          Productos
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            scrollTo("#contact");
+            setOpen(false);
+          }}
+        >
+          Contacto
+        </MenuItem>
       </MobileMenu>
     </>
   );
