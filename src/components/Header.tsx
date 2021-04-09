@@ -16,6 +16,11 @@ const MenuItem = styled.button`
   padding: 0;
   margin: 0;
   text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: ${props => props.theme.colors.blue};
+    opacity: 0.6;
+  }
 `;
 
 const StyledLogo = styled(Logo)`
@@ -72,6 +77,22 @@ const MobileMenu = styled.div`
   }
 `;
 
+const SocialItems = styled.div`
+  a {
+    svg {
+      path {
+        transition: all 0.3s ease-in-out;
+      }
+    }
+    &:hover {
+      path {
+        fill: ${props => props.theme.colors.blue};
+        opacity: 0.6;
+      }
+    }
+  }
+`;
+
 const Header = () => {
   const [open, setOpen] = useState(false);
 
@@ -111,7 +132,7 @@ const Header = () => {
                     </MenuItem>
                   </Col>
                   <Col lg={6}>
-                    <div className="d-flex align-items-center justify-content-center">
+                    <SocialItems className="d-flex align-items-center justify-content-center">
                       <a
                         href=""
                         target="_blank"
@@ -123,7 +144,7 @@ const Header = () => {
                       <a href="" target="_blank" rel="noreferrer">
                         <Instagram />
                       </a>
-                    </div>
+                    </SocialItems>
                   </Col>
                 </Row>
               </Col>

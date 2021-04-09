@@ -31,6 +31,12 @@ const LocationBlock = styled.div`
 const LocationLink = styled.a`
   line-height: 1;
   color: #000;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: ${props => props.theme.colors.blue};
+    text-decoration: none;
+    opacity: 0.6;
+  }
 `;
 
 const Locations = () => {
