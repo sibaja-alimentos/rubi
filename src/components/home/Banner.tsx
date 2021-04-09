@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
-import { StaticImage } from "gatsby-plugin-image";
 
 import Button from "../Button";
 import Image from "../../images/elotitos.png";
@@ -10,11 +9,18 @@ const Wrapper = styled.div`
   background-color: ${props => props.theme.colors.red};
 `;
 
+const Img = styled.img`
+  object-position: left;
+  @media (min-width: 768px) {
+    object-position: center;
+  }
+`;
+
 const Banner = () => {
   return (
     <Container id="contact" fluid className="py-5">
       <Wrapper className="py-5 position-relative px-3">
-        <img
+        <Img
           src={Image}
           alt=""
           style={{

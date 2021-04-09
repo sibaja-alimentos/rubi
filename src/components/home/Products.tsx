@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -8,8 +8,6 @@ import Box from "../Box";
 const Content = styled(Col)`
   background-color: #f3f3f3;
 `;
-
-const ImageBox = styled(Box)``;
 
 const Products = () => {
   return (
@@ -20,7 +18,7 @@ const Products = () => {
           lg={6}
           className="text-center py-5 d-flex flex-wrap align-items-center justify-content-center"
         >
-          <div className="d-inline-block text-left">
+          <div className="d-inline-block text-center text-lg-left">
             <h2 className="d-inline-block mb-4">Tortillas de maíz</h2>
             <ul className="list-unstyled p-0 m-0">
               <li>Tortilla de maseca</li>
@@ -47,7 +45,7 @@ const Products = () => {
           lg={6}
           className="text-center py-5 d-flex align-items-center justify-content-center order-lg-1"
         >
-          <div className="d-inline-block text-left">
+          <div className="d-inline-block text-center text-lg-left">
             <h2 className="d-inline-block mb-4">Tortillas de trigo</h2>
             <ul className="list-unstyled p-0 m-0">
               <li>Tortilla de sincronizada 28 cm</li>

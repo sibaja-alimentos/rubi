@@ -24,11 +24,14 @@ const MenuItem = styled.button`
 `;
 
 const StyledLogo = styled(Logo)`
-  width: 120px;
+  width: 60px;
   max-width: 100%;
   height: auto;
   display: block;
   margin: auto;
+  @media (min-width: 768px) {
+    width: 120px;
+  }
 `;
 
 const MenuBtn = styled.button`
