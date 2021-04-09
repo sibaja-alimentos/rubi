@@ -28,9 +28,11 @@ const StyledLogo = styled(Logo)`
   max-width: 100%;
   height: auto;
   display: block;
-  margin: auto;
   @media (min-width: 768px) {
     width: 120px;
+  }
+  @media (min-width: 992px) {
+    margin: auto;
   }
 `;
 
@@ -121,7 +123,7 @@ const Header = () => {
                   </Col>
                 </Row>
               </Col>
-              <Col xs={6} lg={2}>
+              <Col xs={6} lg={2} className="text-left">
                 <StyledLogo />
               </Col>
               <Col xs={6} className="d-flex d-lg-none justify-content-end">

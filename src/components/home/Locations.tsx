@@ -6,14 +6,16 @@ import Arrow from "../../images/arrow.inline.svg";
 
 const locations = [
   {
-    address: "Las Lomas 301-B 88730",
+    address: "Las Lomas 301-B",
     city: "Reynosa, Tamaulipas",
+    cp: "88730",
     url: "",
     days: "Lunes a domingo:",
     hours: "5:00 a 20:00 horas",
   },
   {
-    address: "San Quintín 1,044 CP. 88730",
+    address: "San Quintín 1,044",
+    cp: "88730",
     city: "Reynosa, Tamaulipas",
     url: "",
     days: "Lunes a sábado:",
@@ -53,6 +55,7 @@ const Locations = () => {
             <Col lg={6}>
               <h3 className="font-weight-bold mb-4">Ubicación:</h3>
               <p className="mb-0 h4">{location.address}</p>
+              <p className="mb-0 h4">{location.cp}</p>
               <p className="h4">{location.city}</p>
               <LocationLink
                 href={location.url}
