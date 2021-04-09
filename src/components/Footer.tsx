@@ -82,11 +82,16 @@ const Footer = () => {
         <a href="" className="d-block">
           informacion@tortilleriarubi.com
         </a>
-        <a href="" className="d-block">
-          (899) 923 1106
+        <a href="tel:8993185234" className="d-block">
+          (899) 318 5234
         </a>
         <div className="d-flex align-items-center justify-content-center mt-4 mb-5">
-          <a href="" target="_blank" rel="noreferrer" className="mr-2">
+          <a
+            href="https://www.facebook.com/tortillasrubireynosa"
+            target="_blank"
+            rel="noreferrer"
+            className="mr-2"
+          >
             <Facebook />
           </a>
           <a href="" target="_blank" rel="noreferrer">
