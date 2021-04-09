@@ -24,7 +24,7 @@ const MenuItem = styled.button`
 `;
 
 const StyledLogo = styled(Logo)`
-  width: 60px;
+  width: 80px;
   max-width: 100%;
   height: auto;
   display: block;
@@ -106,7 +106,7 @@ const Header = () => {
   return (
     <>
       <Headroom>
-        <header className="py-4 bg-white">
+        <header className="py-2 py-lg-4 bg-white">
           <Container>
             <Row className="align-items-center">
               <Col lg={5} className="d-none d-lg-block">
