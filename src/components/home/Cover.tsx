@@ -33,18 +33,24 @@ const Title = styled.h1`
 const Cover = () => {
   return (
     <>
-      <Box height={45} className="position-relative">
+      <div className="position-relative">
         <StaticImage
           src="../../images/cover.jpg"
           alt="Rubí tortillería"
-          style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            top: 0,
-            left: 0,
-            objectFit: "cover",
-          }}
+          aspectRatio={1 / 1.5}
+          className="d-md-none"
+        />
+        <StaticImage
+          src="../../images/cover.jpg"
+          alt="Sibaja alimentos"
+          aspectRatio={1}
+          className="d-none d-md-block d-lg-none"
+        />
+        <StaticImage
+          src="../../images/cover.jpg"
+          alt="Sibaja alimentos"
+          aspectRatio={1 / 0.45}
+          className="d-none d-lg-block"
         />
         <Filter />
         <Wrapper className="text-white">
@@ -67,7 +73,7 @@ const Cover = () => {
             </Row>
           </Container>
         </Wrapper>
-      </Box>
+      </div>
     </>
   );
 };
