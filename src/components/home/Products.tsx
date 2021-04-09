@@ -1,5 +1,5 @@
 import React from "react";
-import { Col } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -14,10 +14,11 @@ const ImageBox = styled(Box)``;
 const Products = () => {
   return (
     <>
-      <div id="products" className="d-flex mt-5">
+      <div id="products" className="d-flex flex-wrap mt-5 mx-0 mb-4 mb-lg-0">
         <Content
+          xs={12}
           lg={6}
-          className="text-center py-5 d-flex align-items-center justify-content-center"
+          className="text-center py-5 d-flex flex-wrap align-items-center justify-content-center"
         >
           <div className="d-inline-block text-left">
             <h2 className="d-inline-block mb-4">Tortillas de maíz</h2>
@@ -31,27 +32,20 @@ const Products = () => {
             </ul>
           </div>
         </Content>
-        <Col lg={6} className="px-0">
-          <ImageBox height={68} className="position-relative">
-            <StaticImage
-              src="../../images/tacos.jpg"
-              alt="tacos con tortilla de maíz"
-              style={{
-                position: "absolute",
-                width: "100%",
-                height: "100%",
-                top: 0,
-                left: 0,
-                objectFit: "cover",
-              }}
-            />
-          </ImageBox>
+        <Col xs={12} lg={6} className="px-0">
+          <StaticImage
+            src="../../images/tacos.jpg"
+            alt="tacos con tortilla de maíz"
+            aspectRatio={1 / 0.68}
+            className="d-block"
+          />
         </Col>
       </div>
-      <div className="d-flex">
+      <div className="d-flex flex-wrap">
         <Content
+          xs={12}
           lg={6}
-          className="text-center py-5 d-flex align-items-center justify-content-center order-1"
+          className="text-center py-5 d-flex align-items-center justify-content-center order-lg-1"
         >
           <div className="d-inline-block text-left">
             <h2 className="d-inline-block mb-4">Tortillas de trigo</h2>
@@ -64,21 +58,13 @@ const Products = () => {
             </ul>
           </div>
         </Content>
-        <Col lg={6} className="px-0 order-0">
-          <ImageBox height={68} className="position-relative">
-            <StaticImage
-              src="../../images/burritos.jpg"
-              alt="burritos con tortilla de trigo"
-              style={{
-                position: "absolute",
-                width: "100%",
-                height: "100%",
-                top: 0,
-                left: 0,
-                objectFit: "cover",
-              }}
-            />
-          </ImageBox>
+        <Col xs={12} lg={6} className="px-0 order-lg-0">
+          <StaticImage
+            src="../../images/burritos.jpg"
+            alt="burritos con tortilla de trigo"
+            aspectRatio={1 / 0.68}
+            className="d-block"
+          />
         </Col>
       </div>
     </>

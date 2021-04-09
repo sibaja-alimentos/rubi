@@ -36,8 +36,9 @@ const MenuBtn = styled.button`
   max-width: 50px;
   background: transparent;
   border: 0;
+  text-align: right;
   svg {
-    width: 100%;
+    width: 30px;
     height: auto;
   }
 `;
@@ -62,10 +63,11 @@ const MobileMenu = styled.div`
     top: 15px;
     right: 15px;
     width: 50px;
+    text-align: right;
     background: transparent;
     border: 0;
     svg {
-      width: 100%;
+      width: 30px;
       height: auto;
     }
   }

@@ -8,6 +8,7 @@ const Button = styled.button`
   padding: 20px 50px;
   letter-spacing: 0.2em;
   transition: all 0.3s ease-in-out;
+  font-size: 0.8rem;
   &:hover {
     background-color: ${props => props.theme.colors.blue};
     color: #fff;

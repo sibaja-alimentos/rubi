@@ -58,6 +58,11 @@ const Circle = styled(Box)`
   right: 0;
   margin: auto;
   width: 200vw;
+  &:after {
+    @media (max-width: 767px) {
+      padding-top: 100%;
+    }
+  }
   @media (min-width: 1200px) {
     width: 116vw;
     left: -8vw;

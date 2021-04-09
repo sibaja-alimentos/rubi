@@ -13,7 +13,7 @@ const locations = [
     hours: "5:00 a 20:00 horas",
   },
   {
-    address: "San Quintín 1,044 88730",
+    address: "San Quintín 1,044 CP. 88730",
     city: "Reynosa, Tamaulipas",
     url: "",
     days: "Lunes a sábado:",
