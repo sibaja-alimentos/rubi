@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import Button from "../Button";
 import Image from "../../images/elotitos.png";
+import MobileImg from "../../images/elotitos-movil.png";
 
 const Wrapper = styled.div`
   background-color: ${props => props.theme.colors.red};
@@ -31,6 +32,20 @@ const Banner = () => {
             left: 0,
             objectFit: "cover",
           }}
+          className="d-none d-md-block"
+        />
+        <Img
+          src={MobileImg}
+          alt=""
+          style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            top: 0,
+            left: 0,
+            objectFit: "cover",
+          }}
+          className="d-md-none"
         />
         <Row className="py-5">
           <Col lg={10} className="mx-auto py-5">
