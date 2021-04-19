@@ -148,7 +148,11 @@ const Header = () => {
                       >
                         <Facebook />
                       </a>
-                      <a href="" target="_blank" rel="noreferrer">
+                      <a
+                        href="https://www.instagram.com/sibaja_alimentos/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <Instagram />
                       </a>
                     </SocialItems>

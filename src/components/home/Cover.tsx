@@ -4,6 +4,8 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Container, Row, Col } from "react-bootstrap";
 import smoothScroll from "gatsby-plugin-smoothscroll";
 
+import Button from "../Button";
+
 const Filter = styled.div`
   position: absolute;
   width: 100%;
@@ -25,22 +27,6 @@ const Wrapper = styled.div`
 
 const Title = styled.h1`
   letter-spacing: 0.5em;
-`;
-
-const Button = styled.a`
-  background-color: #fff;
-  color: ${props => props.theme.colors.blue};
-  border-radius: 50rem;
-  border: none;
-  padding: 20px 50px;
-  letter-spacing: 0.2em;
-  transition: all 0.3s ease-in-out;
-  font-size: 0.8rem;
-  &:hover {
-    background-color: ${props => props.theme.colors.blue};
-    color: #fff;
-    text-decoration: none;
-  }
 `;
 
 const Cover = () => {
@@ -77,10 +63,8 @@ const Cover = () => {
                   20 años presentes en los momentos felices de tu familia
                 </p>
                 <Button
-                  href="https://sibajaalimentos.com/#contacto"
-                  target="_blank"
-                  rel="noreferrer"
                   className="text-uppercase"
+                  onClick={() => smoothScroll("#footer")}
                 >
                   Contáctanos
                 </Button>

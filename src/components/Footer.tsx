@@ -71,7 +71,7 @@ const Circle = styled(Box)`
 
 const Footer = () => {
   return (
-    <FooterWrapper className="pb-5">
+    <FooterWrapper id="footer" className="pb-5">
       <Circle height={60} />
       <Deco1 className="deco" />
       <Deco2 className="deco" />
@@ -94,7 +94,11 @@ const Footer = () => {
           >
             <Facebook />
           </a>
-          <a href="" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.instagram.com/sibaja_alimentos/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Instagram />
           </a>
         </div>
