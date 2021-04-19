@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 
-import Button from "../Button";
 import Image from "../../images/elotitos.png";
 import MobileImg from "../../images/elotitos-movil.png";
 
@@ -14,6 +13,22 @@ const Img = styled.img`
   object-position: left;
   @media (min-width: 768px) {
     object-position: center;
+  }
+`;
+
+const Button = styled.a`
+  background-color: #fff;
+  color: ${props => props.theme.colors.blue};
+  border-radius: 50rem;
+  border: none;
+  padding: 20px 50px;
+  letter-spacing: 0.2em;
+  transition: all 0.3s ease-in-out;
+  font-size: 0.8rem;
+  &:hover {
+    background-color: ${props => props.theme.colors.blue};
+    color: #fff;
+    text-decoration: none;
   }
 `;
 
@@ -56,7 +71,14 @@ const Banner = () => {
                 </h2>
               </Col>
               <Col lg={5} className="text-center">
-                <Button className="text-uppercase">Contáctanos</Button>
+                <Button
+                  href="https://sibajaalimentos.com/#contacto"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-uppercase"
+                >
+                  Contáctanos
+                </Button>
               </Col>
             </Row>
           </Col>

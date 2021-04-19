@@ -79,7 +79,7 @@ const Footer = () => {
       <Deco4 className="deco" />
       <Container className="text-center position-relative pt-5">
         <h4 className="text-uppercase h6">Tortillería Rubí</h4>
-        <a href="" className="d-block">
+        <a href="mailto:informacion@tortilleriarubi.com" className="d-block">
           informacion@tortilleriarubi.com
         </a>
         <a href="tel:8993185234" className="d-block">
@@ -98,7 +98,7 @@ const Footer = () => {
             <Instagram />
           </a>
         </div>
-        <a href="" target="_blank" rel="noreferrer">
+        <a href="https://sibajaalimentos.com" target="_blank" rel="noreferrer">
           Visita: Sibaja Alimentos
         </a>
       </Container>

@@ -9,7 +9,8 @@ const locations = [
     address: "Las Lomas 301-B",
     city: "Reynosa, Tamaulipas",
     cp: "88730",
-    url: "",
+    url:
+      "https://www.google.com.mx/maps/place/Tortilleria+Rubi/@26.0398172,-98.3547958,17z/data=!4m5!3m4!1s0x86650454d4f7e9db:0x5e40fd628ac67544!8m2!3d26.039075!4d-98.352768",
     days: "Lunes a domingo:",
     hours: "5:00 a 20:00 horas",
   },
@@ -17,7 +18,8 @@ const locations = [
     address: "San Quintín 1,044",
     cp: "88730",
     city: "Reynosa, Tamaulipas",
-    url: "",
+    url:
+      "https://www.google.com.mx/maps/place/San+Quint%C3%ADn+1044,+Lomas+del+Real+de+Jarachina+Sur,+88730+Reynosa,+Tamps./@26.0412197,-98.3623167,18z/data=!3m1!4b1!4m5!3m4!1s0x86650450d3685617:0x96c25cb86899f6b6!8m2!3d26.0412197!4d-98.3612224",
     days: "Lunes a sábado:",
     hours: "6:00 a 14:00 horas",
   },
